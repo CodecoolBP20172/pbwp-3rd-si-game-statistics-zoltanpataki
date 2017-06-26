@@ -1,7 +1,7 @@
 import reports
 
 
-def export_reports_answers(file_name, year, genre, title, export_file="export_reports.txt"):
+def export_reports_answers(file_name, title, year, genre, export_file="export_reports.txt"):
     file = open(export_file, "w")
     file.write("The number of games in the file: {}\n".format(reports.count_games(file_name)))
     file.write("There is a game from a given year: {}\n".format(reports.decide(file_name, year)))
@@ -13,4 +13,4 @@ def export_reports_answers(file_name, year, genre, title, export_file="export_re
     file.write("The release date of the top sold First-person shooter game is: {}\n".format(reports.when_was_top_sold_fps(file_name)))
     file.close()
 
-export_reports_answers("game_stat.txt", 2004, "First-person shooter", "Terraria")
+export_reports_answers("game_stat.txt", "Terraria", 2004, "First-person shooter")
