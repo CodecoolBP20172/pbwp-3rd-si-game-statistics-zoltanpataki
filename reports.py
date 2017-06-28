@@ -12,10 +12,9 @@ def count_games(file_name):
 
 def decide(file_name, year):
     for game in file_opening(file_name):
-        for data in game:
-            if str(year) in game:
-                return True
-                break
+        if str(year) in game:
+            return True
+            break
     return False
 
 
